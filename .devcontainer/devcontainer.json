@@ -1,6 +1,6 @@
 {
   "name": "DevBox",
-  "image": "ghcr.io/allhingeslost/devbox:latest",
+  "image": "ghcr.io/allhingeslost/anvil:latest",
   "privileged": true,
   "remoteUser": "vscode",
 
