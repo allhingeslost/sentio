@@ -1,6 +1,6 @@
 {
-  "name": "DevBox",
-  "image": "ghcr.io/allhingeslost/anvil:latest",
+  "name": "Sentio",
+  "image": "ghcr.io/allhingeslost/anvil:base",
   "privileged": true,
   "remoteUser": "vscode",
 
@@ -12,7 +12,9 @@
     "source=${localEnv:HOME}/.gitconfig,target=/tmp/setup/.gitconfig,type=bind,readonly",
     "source=${localEnv:HOME}/.config/gh,target=/tmp/setup/gh,type=bind,readonly",
     "source=${localEnv:HOME}/.config/opencode,target=/tmp/setup/opencode-config,type=bind,readonly",
-    "source=${localEnv:HOME}/.local/share/opencode,target=/tmp/setup/opencode-share,type=bind,readonly"
+    "source=${localEnv:HOME}/.local/share/opencode,target=/tmp/setup/opencode-share,type=bind,readonly",
+    "source=${localEnv:HOME}/.config/crush,target=/tmp/setup/crush-config,type=bind,readonly",
+    "source=${localEnv:HOME}/.local/share/crush,target=/tmp/setup/crush-share,type=bind,readonly"
   ],
 
   "postStartCommand": "bash .devcontainer/setup.sh"
